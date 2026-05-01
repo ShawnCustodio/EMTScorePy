@@ -1,7 +1,7 @@
 # EMTscore Python port (`Python_Conv`)
 
 A publishable, self-contained Python package and notebook that mirrors the R
-[EMTscore]((https://github.com/wenmm/EMTscore)) vignette (`EMTscore.html`)
+[EMTscore](https://github.com/wenmm/EMTscore) vignette (`EMTscore.html`)
 section-by-section. The package ships with:
 
 - **Reusable scoring modules** in `emtscore/` — the four building blocks used
