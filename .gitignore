@@ -1,0 +1,35 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Packaging / distribution
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Backup / scratch artifacts
+*.bak
+*.clean
+
+# Cook 2020 heavy raw-count matrices (150-576 MB each, fetch from Zenodo)
+data/cook2020/*_counts.csv
+data/cook2020/*_genes.csv
+data/cook2020/*_cells.csv
+data/cook2020/*_metadata.csv
