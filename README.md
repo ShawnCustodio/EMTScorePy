@@ -11,7 +11,7 @@ section-by-section. The package ships with:
 - **Gene signatures and reference GMTs** in `data/`.
 - **Two notebooks** in `notebooks/`:
   - `EMTscore_full_analysis.ipynb` — the validated, cell-by-cell working copy
-    of the original analysis (49 cells covering §2.1 – §3.6).
+    of the original analysis (49 cells covering 2.1 – 3.6).
   - `EMTscore_automated.ipynb` — a slimmed-down, publication-style notebook
     that calls the `emtscore/` API and reproduces every figure from the R
     vignette in five clean cells.
@@ -42,8 +42,8 @@ pip install -e .
 jupyter notebook notebooks/EMTscore_automated.ipynb
 ```
 
-§2.1–§2.11, §3.1.1, §3.2, §3.2.1, and §3.3 will run end-to-end on the
-bundled data alone. §3.1, §3.4, §3.5, and §3.6 require the heavy
+2.1–2.11, 3.1.1, 3.2, 3.2.1, and 3.3 will run end-to-end on the
+bundled data alone. 3.1, 3.4, 3.5, and 3.6 require the heavy
 `*_counts.csv` files — see *Sections that need extra data* below for
 the one-time Zenodo download. The `.gitignore` already excludes those
 files so they will never accidentally be committed if you do place
@@ -59,29 +59,29 @@ exceed GitHub's 100 MB per-file limit — but you can fetch them on demand.
 
 | File | Size | Used by |
 |---|---|---|
-| `data/Panchy_et_al_{E,M}_signature.csv` | <2 KB | §2.1–2.11, §3.1.1, §3.2 |
-| `data/EM_signature.gmt` | 3 KB | §2.5 (multi-method scoring) |
-| `data/cell_annotation_file.csv` | 2 KB | §2.6–2.10 |
-| `data/geneExp.csv` | 19 MB | §2.1–2.11 (bulk RNA-seq input) |
-| `data/stemsig.tsv` | 0.5 KB | §3.5 (stemness signature) |
-| `data/cellular_senescence_sig.tsv` | 1 KB | §3.5 (senescence signature) |
-| `data/filtered.c2.gmt` | 10 KB | §3.3 (small fallback pathway set) |
-| `data/c2.all.v2025.1.Hs.symbols.gmt` | 4.4 MB | §3.3 (full MSigDB C2) |
-| `data/TianLab_collected_EMT_signatures.gmt` | 70 KB | §3.3 (reference EMT sets) |
-| `data/cook2020/A549_*_em_expr.csv` | ~19 MB total | §3.1.1, §3.2, §3.2.1 |
+| `data/Panchy_et_al_{E,M}_signature.csv` | <2 KB | 2.1–2.11, 3.1.1, 3.2 |
+| `data/EM_signature.gmt` | 3 KB | 2.5 (multi-method scoring) |
+| `data/cell_annotation_file.csv` | 2 KB | 2.6–2.10 |
+| `data/geneExp.csv` | 19 MB | 2.1–2.11 (bulk RNA-seq input) |
+| `data/stemsig.tsv` | 0.5 KB | 3.5 (stemness signature) |
+| `data/cellular_senescence_sig.tsv` | 1 KB | 3.5 (senescence signature) |
+| `data/filtered.c2.gmt` | 10 KB | 3.3 (small fallback pathway set) |
+| `data/c2.all.v2025.1.Hs.symbols.gmt` | 4.4 MB | 3.3 (full MSigDB C2) |
+| `data/TianLab_collected_EMT_signatures.gmt` | 70 KB | 3.3 (reference EMT sets) |
+| `data/cook2020/A549_*_em_expr.csv` | ~19 MB total | 3.1.1, 3.2, 3.2.1 |
 
 **Sections that run with the bundled data only:**
-§2.1 – §2.11 (bulk RNA-seq), §3.1.1 (EMT vs pseudotime), §3.2 (GMM),
-§3.2.1 (Sankey), §3.3 (pathway correlation).
+2.1 – 2.11 (bulk RNA-seq), 3.1.1 (EMT vs pseudotime), 3.2 (GMM),
+3.2.1 (Sankey), 3.3 (pathway correlation).
 
 **Sections that need extra data:**
-§3.1 (`load_cook_adatas` builds a full AnnData), §3.4 (E-vs-M & PC1-vs-PC2
-panels), §3.5 (stemness/senescence), §3.6 (integration). These call
+3.1 (`load_cook_adatas` builds a full AnnData), 3.4 (E-vs-M & PC1-vs-PC2
+panels), 3.5 (stemness/senescence), 3.6 (integration). These call
 `load_cook2020(...)` which reads the per-cell `*_counts.csv`,
 `*_genes.csv`, `*_cells.csv`, `*_metadata.csv` files. The counts CSVs are
 150–576 MB each.
 
-**To enable §3.1 / §3.4 / §3.5 / §3.6:**
+**To enable 3.1 / 3.4 / 3.5 / 3.6:**
 
 1. Download the Cook *et al.* 2020 CSV exports from the project's Zenodo
    archive ([10.5281/zenodo.18489669](https://doi.org/10.5281/zenodo.18489669)).
